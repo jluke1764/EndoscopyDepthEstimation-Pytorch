@@ -80,3 +80,8 @@ We kindly ask you to cite [TMI](https://ieeexplore.ieee.org/abstract/document/88
 
 - [Extremely Dense Point Correspondences using a Learned Feature Descriptor (CVPR 2020)](https://github.com/lppllppl920/DenseDescriptorLearning-Pytorch)
 
+
+# necessary changes to make the code run
+train.py line 149         "_".join(str(testing_patient_id)))
+utils.py line 228     doc = yaml.safe_load(stream)
+
