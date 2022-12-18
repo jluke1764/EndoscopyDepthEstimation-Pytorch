@@ -231,6 +231,9 @@ if __name__ == '__main__':
         torch.manual_seed(10086 + epoch)
         np.random.seed(10086 + epoch)
         random.seed(10086 + epoch)
+
+        print(epoch)
+        
         depth_estimation_model.train()
 
         # Update progress bar
