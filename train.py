@@ -146,7 +146,7 @@ if __name__ == '__main__':
         currentDT.day,
         currentDT.hour,
         currentDT.minute,
-        "_".join(str(testing_patient_id)))
+        "_".join(str(testing_patient_id))) #JL added str
     if not log_root.exists():
         log_root.mkdir()
     writer = SummaryWriter(logdir=str(log_root))

@@ -225,7 +225,7 @@ def read_view_indexes_per_point(prefix_seq, visible_view_indexes, point_cloud_co
 
 def read_pose_data(prefix_seq):
     stream = open(str(prefix_seq / "motion.yaml"), 'r')
-    doc = yaml.safe_load(stream)
+    doc = yaml.safe_load(stream) # JL added safe_load
     keys, values = doc.items()
     poses = values[1]
     return poses
