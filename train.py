@@ -231,9 +231,10 @@ if __name__ == '__main__':
         torch.manual_seed(10086 + epoch)
         np.random.seed(10086 + epoch)
         random.seed(10086 + epoch)
-
-        print(epoch)
         
+        print("epoch")
+        print(epoch)
+
         depth_estimation_model.train()
 
         # Update progress bar
@@ -249,6 +250,9 @@ if __name__ == '__main__':
                 sparse_flows_1, sparse_flows_2, sparse_flow_masks_1, sparse_flow_masks_2, boundaries, rotations_1_wrt_2,
                 rotations_2_wrt_1, translations_1_wrt_2, translations_2_wrt_1, intrinsics, folders, file_names) in \
                 enumerate(train_loader):
+                
+            torch.cuda.memory_summary(device=None, abbreviated=False)
+
 
             # Update learning rate
             lr_scheduler.batch_step(batch_iteration=step)
